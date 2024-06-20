@@ -7,10 +7,10 @@ public class PlayerMovement : MonoBehaviour {
     public GameObject bulletPrefab;
 
     void processMovement() {
-        if (Input.GetKey("left")){
+        if (Input.GetKey("left") || Input.GetKey("a")){
             transform.position = new Vector2(transform.position.x - movementSpeed, transform.position.y);
         }
-        if (Input.GetKey("right")){
+        if (Input.GetKey("right") || Input.GetKey("d")){
             transform.position = new Vector2(transform.position.x + movementSpeed, transform.position.y);
         }
         /* if (Input.GetKey("up")){
