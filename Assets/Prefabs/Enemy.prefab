@@ -127,8 +127,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 6100588552873889184}
   boomPrefab: {fileID: 7759265183097494117, guid: fe99b9fa36f1bef45bc48c4b8fe25aef, type: 3}
-  enemySpeed: 0.01
-  enemyMovementSpace: 2
+  cooldownDuration: 2
+  enemyBulletPrefab: {fileID: 722659762369996543, guid: a9aaa2947b8759d4a8426eb1e99a359d, type: 3}
 --- !u!50 &6100588552873889184
 Rigidbody2D:
   serializedVersion: 4

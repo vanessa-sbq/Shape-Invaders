@@ -29,7 +29,6 @@ public class AllEnemyMovScript : MonoBehaviour {
         else if (transform.position.x >= enemyOriginX + (enemyMovementSpace / 2)){
             goToRight = false;
         }
-        Debug.Log(enemyMovementSpace + "      " + enemyOriginX);
 
         int direction = goToRight ? 1 : -1;
         transform.position = new Vector2(transform.position.x + direction * enemySpeed, transform.position.y);

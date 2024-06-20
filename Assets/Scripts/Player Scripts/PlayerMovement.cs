@@ -13,12 +13,6 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetKey("right") || Input.GetKey("d")){
             transform.position = new Vector2(transform.position.x + movementSpeed, transform.position.y);
         }
-        /* if (Input.GetKey("up")){
-            transform.position = new Vector2(transform.position.x, transform.position.y + movementSpeed);
-        }
-        if (Input.GetKey("down")){
-            transform.position = new Vector2(transform.position.x, transform.position.y - movementSpeed);
-        } */
     }
 
     void processShooting() {

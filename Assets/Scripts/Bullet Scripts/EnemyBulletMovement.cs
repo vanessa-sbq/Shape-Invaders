@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class BulletMovement : MonoBehaviour {
+public class EnemyBulletMovement : MonoBehaviour {
     public float movementSpeed = 10f;
     public float leftBound = -10;
     public float rightBound = 10;
@@ -18,7 +18,7 @@ public class BulletMovement : MonoBehaviour {
 
 
     void Update() {
-        transform.position += Vector3.up * movementSpeed * Time.deltaTime;
+        transform.position += Vector3.down * movementSpeed * Time.deltaTime;
 
         // Check bounds and destroy the bullet if it goes out of bounds
         if (IsOutOfBounds()) {
