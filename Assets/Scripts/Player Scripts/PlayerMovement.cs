@@ -6,11 +6,14 @@ public class PlayerMovement : MonoBehaviour {
     public float movementSpeed = 0.025f;
     public GameObject bulletPrefab;
 
+    public ParticleSystem boomPrefab;
+
+
     void processMovement() {
-        if (Input.GetKey("left") || Input.GetKey("a")){
+        if ((Input.GetKey("left") || Input.GetKey("a")) && (transform.position.x > -8)){
             transform.position = new Vector2(transform.position.x - movementSpeed * Time.deltaTime, transform.position.y);
         }
-        if (Input.GetKey("right") || Input.GetKey("d")){
+        if ((Input.GetKey("right") || Input.GetKey("d")) && (transform.position.x < 8)){
             transform.position = new Vector2(transform.position.x + movementSpeed * Time.deltaTime, transform.position.y);
         }
     }
@@ -18,12 +21,6 @@ public class PlayerMovement : MonoBehaviour {
     void processShooting() {
         if (Input.GetKeyDown("space")) {  // This is more flexible than hardcoding "space"
             Instantiate(bulletPrefab, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
-
-            /* if (bulletPrefab != null) {
-                Instantiate(bulletPrefab, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
-            } else {
-                Debug.LogWarning("Bullet prefab is not assigned.");
-            } */
         }
     }
 
@@ -38,9 +35,9 @@ public class PlayerMovement : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D collider){
         if (collider.gameObject.tag != "PlayerBullet"){
             Destroy(gameObject);
-            //Instantiate(boomPrefab, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
+            Instantiate(boomPrefab, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
             ScreenShake.setStart(true);
-            //boomPrefab.Play();
+            boomPrefab.Play();
         }
     }
 }

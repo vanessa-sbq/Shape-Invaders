@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2606715909824112596}
   - component: {fileID: 7759265183097494117}
   - component: {fileID: 2245305180550003548}
-  - component: {fileID: -8397878676914336051}
+  - component: {fileID: -7822332138736438372}
   m_Layer: 0
-  m_Name: bulletCollisionEffect
+  m_Name: PlayerDeathEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -224,7 +224,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.4056604, g: 0.12884179, b: 0.12884179, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4762,7 +4762,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 364e99162a9d92b44bf4878d6de42cc7, type: 2}
+  - {fileID: 2100000, guid: 8fb22b07cba248742a124e46d41b235b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4813,7 +4813,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!82 &-8397878676914336051
+--- !u!82 &-7822332138736438372
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4823,7 +4823,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c7f797e6b20fd0d4a94653579a00dc32, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 72c620a5caa6d1e4cb9559168949424c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
