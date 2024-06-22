@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6100588552873889184}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,6 +128,8 @@ MonoBehaviour:
   rb: {fileID: 6100588552873889184}
   boomPrefab: {fileID: 7759265183097494117, guid: fe99b9fa36f1bef45bc48c4b8fe25aef, type: 3}
   cooldownDuration: 2
+  cooldownMaxDuration: 8
+  cooldownMinDuration: 4
   enemyBulletPrefab: {fileID: 722659762369996543, guid: a9aaa2947b8759d4a8426eb1e99a359d, type: 3}
 --- !u!50 &6100588552873889184
 Rigidbody2D:

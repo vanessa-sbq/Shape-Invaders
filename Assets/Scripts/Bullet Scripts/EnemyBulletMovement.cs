@@ -27,7 +27,10 @@ public class EnemyBulletMovement : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D collider){
-        Destroy(gameObject);
+        if (collider.gameObject.tag != "Enemy"){
+            Debug.Log(collider.gameObject + " " + collider.gameObject.tag);
+            Destroy(gameObject);
+        }
     }
 
 }

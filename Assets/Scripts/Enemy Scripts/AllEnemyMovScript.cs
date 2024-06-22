@@ -31,6 +31,6 @@ public class AllEnemyMovScript : MonoBehaviour {
         }
 
         int direction = goToRight ? 1 : -1;
-        transform.position = new Vector2(transform.position.x + direction * enemySpeed, transform.position.y);
+        transform.position = new Vector2(transform.position.x + direction * enemySpeed * Time.deltaTime, transform.position.y);
     }
 }
