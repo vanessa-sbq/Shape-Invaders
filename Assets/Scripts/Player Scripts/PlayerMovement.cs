@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
     public float movementSpeed = 0.025f;
@@ -38,6 +39,7 @@ public class PlayerMovement : MonoBehaviour {
             Instantiate(boomPrefab, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
             ScreenShake.setStart(true);
             boomPrefab.Play();
+            FindObjectOfType<GameManager>().endGame();
         }
     }
 }
